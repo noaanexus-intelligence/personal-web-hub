@@ -1,9 +1,9 @@
 {
-  "name": "personal-web-hub",
+  "name": "kiw-hq",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "เว็บรวมลิงก์ส่วนตัวไว้ในที่เดียว — local-first personal start page",
+  "description": "Kiw HQ — ศูนย์บัญชาการส่วนตัว รวมลิงก์ทุกอย่างไว้ในที่เดียว (local-first start page)",
   "scripts": {
     "dev": "vite",
     "prebuild": "tsc --noEmit",

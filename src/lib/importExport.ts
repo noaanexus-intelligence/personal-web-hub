@@ -11,7 +11,7 @@ export function buildExport(
   // ไม่ export ข้อมูลที่ไม่ควรพกไปเครื่องอื่น (เช่นสถานะ onboarding)
   const { onboarded: _onboarded, ...safeSettings } = settings
   return {
-    app: 'personal-web-hub',
+    app: 'kiw-hq',
     version: SCHEMA_VERSION,
     exportedAt: new Date().toISOString(),
     spaces,
@@ -48,8 +48,9 @@ export function parseImport(raw: string): ParsedImport {
   }
   if (!json || typeof json !== 'object') throw new Error('รูปแบบไฟล์ไม่ถูกต้อง')
   const obj = json as Partial<HubExport>
-  if (obj.app && obj.app !== 'personal-web-hub') {
-    throw new Error('ไฟล์นี้ไม่ใช่ข้อมูลของ Personal Web Hub')
+  // รับทั้งชื่อใหม่ (kiw-hq) และชื่อเดิมก่อน rebrand (personal-web-hub)
+  if (obj.app && obj.app !== 'kiw-hq' && obj.app !== 'personal-web-hub') {
+    throw new Error('ไฟล์นี้ไม่ใช่ข้อมูลของ Kiw HQ')
   }
   if (!Array.isArray(obj.links)) throw new Error('ไม่พบรายการลิงก์ในไฟล์')
 

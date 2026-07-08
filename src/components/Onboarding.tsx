@@ -12,7 +12,7 @@ export function Onboarding() {
       <div className="mx-auto mb-5 grid h-16 w-16 place-items-center rounded-2xl bg-accent text-[color:var(--accent-fg)] shadow-soft">
         <Sparkles size={30} />
       </div>
-      <h1 className="text-2xl font-bold">ยินดีต้อนรับสู่ Personal Web Hub</h1>
+      <h1 className="text-2xl font-bold">ยินดีต้อนรับสู่ Kiw HQ</h1>
       <p className="mx-auto mt-2 max-w-md text-muted">
         รวมเว็บและลิงก์ที่ใช้ประจำไว้ในที่เดียว — เก็บในเครื่องคุณเอง ไม่ต้องล็อกอิน ไม่มีเซิร์ฟเวอร์
       </p>

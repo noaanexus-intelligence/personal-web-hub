@@ -22,7 +22,7 @@ export function TopBar() {
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-accent text-[color:var(--accent-fg)]">
             <Link2 size={18} />
           </span>
-          <span className="hidden sm:inline">My Web Hub</span>
+          <span className="hidden sm:inline">Kiw HQ</span>
         </div>
 
         {/* Search bar (inline filter) — ⌘K เปิด Command Palette */}

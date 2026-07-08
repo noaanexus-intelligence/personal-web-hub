@@ -62,8 +62,9 @@ export interface Settings {
 export const SCHEMA_VERSION = 1
 
 // รูปแบบไฟล์ Export / Import JSON
+// 'personal-web-hub' คือชื่อเดิมก่อน rebrand เป็น Kiw HQ — ยังรับ import ได้
 export interface HubExport {
-  app: 'personal-web-hub'
+  app: 'kiw-hq' | 'personal-web-hub'
   version: number
   exportedAt: string
   spaces: Space[]

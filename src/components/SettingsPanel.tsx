@@ -283,7 +283,7 @@ function DataTab() {
 
   const onExport = () => {
     const data = exportData()
-    downloadJson(data, `web-hub-backup-${data.exportedAt.slice(0, 10)}.json`)
+    downloadJson(data, `kiw-hq-backup-${data.exportedAt.slice(0, 10)}.json`)
     toast('ส่งออกข้อมูลแล้ว', 'success')
   }
 
