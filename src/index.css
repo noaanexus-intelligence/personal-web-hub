@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply w-full rounded-xl border border-line bg-bg px-3 py-2 text-sm text-fg outline-none transition placeholder:text-muted focus:border-accent;
+  }
+}
+
+:root {
+  /* Light theme (จาก UI Style Guide) */
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --elevated: #ffffff;
+  --fg: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #4f46e5;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(79, 70, 229, 0.1);
+  --radius: 1rem;
+  --font-scale: 1;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0f172a;
+  --card: #111827;
+  --elevated: #1e293b;
+  --fg: #f9fafb;
+  --muted: #9ca3af;
+  --line: #1f2937;
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(139, 92, 246, 0.16);
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  font-size: calc(16px * var(--font-scale));
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', 'Noto Sans Thai', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+/* ปิด animation ทั้งหมดเมื่อ user ปิดใน Settings */
+.no-anim *,
+.no-anim *::before,
+.no-anim *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Scrollbar เนียน ๆ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
