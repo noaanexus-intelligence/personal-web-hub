@@ -6,7 +6,8 @@
   "description": "เว็บรวมลิงก์ส่วนตัวไว้ในที่เดียว — local-first personal start page",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "prebuild": "tsc --noEmit",
+    "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
